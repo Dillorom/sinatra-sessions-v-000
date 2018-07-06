@@ -1,5 +1,5 @@
 require_relative 'config/environment'
-
+require 'pry'
 class App < Sinatra::Base
   configure do
     enable :sessions unless test?
@@ -19,6 +19,7 @@ class App < Sinatra::Base
   end
 
   get '/set' do
+    binding.pry
     # set the :foo key of the session hash equal to 'hello' here!
     session[:foo] == 'hello'
     # if session[:foo] == 'hello'
