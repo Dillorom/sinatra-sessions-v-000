@@ -19,7 +19,7 @@ class App < Sinatra::Base
   end
 
   get '/set' do
-    binding.pry
+    #binding.pry
     # set the :foo key of the session hash equal to 'hello' here!
     session[:foo] = "hello"
        if session[:foo] == 'hello'
